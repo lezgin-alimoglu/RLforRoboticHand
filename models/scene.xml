@@ -1,0 +1,4 @@
+<mujoco>
+  <include file="panda_model/scene.xml"/>
+  <include file="cup/cup.xml"/>
+</mujoco>

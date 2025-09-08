@@ -1,0 +1,23 @@
+<mujoco>
+  <asset>
+    <material name="cup_material" rgba="0.8 0.8 0.8 1"/>
+  </asset>
+  
+  <worldbody>
+    <!-- Movable cup with free joint -->
+    <body name="cup" pos="0.5 0 0.2">
+      <!-- Add free joint to make cup movable -->
+      <freejoint name="cup_free"/>
+      
+      <!-- Add inertial properties first -->
+      <inertial pos="0 0 0.04" mass="0.15" diaginertia="0.001 0.001 0.0005"/>
+      
+      <!-- Cup base -->
+      <geom type="cylinder" size="0.04 0.002" pos="0 0 0" material="cup_material"/>
+      
+      <!-- Cup walls (hollow cylinder) -->
+      <geom type="cylinder" size="0.04 0.08" pos="0 0 0.08" material="cup_material" 
+            rgba="0.8 0.8 0.8 0.5"/>
+    </body>
+  </worldbody>
+</mujoco>
